@@ -1,0 +1,73 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Space Mono';
+}
+
+.container {
+	width: 80%;
+	margin: 0px auto;
+	margin-top: 40px;
+}
+
+.error {
+	font-family: 'Inconsolata';
+}
+
+.main {
+	margin-top: 15vh;
+}
+
+.main img {
+	width: 45%;
+	float: left;
+}
+
+.massage {
+	width: 45%;
+	float: right;
+}
+
+.massage h1 {
+	font-size: 64px;
+	margin-bottom: 30px;
+}
+
+.massage p {
+	width: 37%;
+	text-align: justify;
+	margin-bottom: 66px;
+}
+
+.massage .btn {
+	width: 216px;
+	height: 68px;
+	border: none;
+	background: #333;
+	color: #fff;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 360px) {
+	.main img {
+		width: 100%;
+		float: none;
+	}
+
+	.massage {
+		width: 100%;
+		float: none;
+	}
+
+	.massage h1 {
+		font-size: 35px;
+	}
+
+	.massage p {
+		width: 100%;
+		text-align: normal;
+		margin-bottom: 66px;
+	}
+}
