@@ -5,18 +5,20 @@
 	font-family: 'Space Mono';
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+}
+
 .container {
 	width: 80%;
 	margin: 0px auto;
-	margin-top: 40px;
 }
 
 .error {
 	font-family: 'Inconsolata';
-}
-
-.main {
-	margin-top: 15vh;
 }
 
 .main img {
