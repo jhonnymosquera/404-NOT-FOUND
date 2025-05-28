@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-	font-family: 'Space Mono';
+	font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
@@ -10,6 +14,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	height: 100vh;
+	color: #333; /* dark gray for text */
 }
 
 .container {
@@ -21,55 +26,86 @@ body {
 	font-family: 'Inconsolata';
 }
 
+.main {
+	display: flex;
+	align-items: center; /* Vertically align items */
+	justify-content: space-between; /* Create space between image and text */
+}
+
 .main img {
-	width: 45%;
-	float: left;
+	width: 40%; /* Adjusted width */
+	margin-right: 20px; /* Added spacing */
+	/* float: left; removed */
 }
 
 .massage {
-	width: 45%;
-	float: right;
+	width: 55%; /* Adjusted width */
+	/* float: right; removed */
 }
 
 .massage h1 {
-	font-size: 64px;
+	font-size: 48px; /* Updated font size */
 	margin-bottom: 30px;
+	color: #111; /* a slightly darker gray for the main heading */
 }
 
 .massage p {
-	width: 37%;
+	width: 100%; /* Adjusted for desktop view to allow proper flex sizing */
 	text-align: justify;
 	margin-bottom: 66px;
+	font-size: 18px; /* Added font size */
+	line-height: 1.6; /* Added line height */
 }
 
 .massage .btn {
-	width: 216px;
-	height: 68px;
+	/* width: 216px; removed */
+	/* height: 68px; removed */
 	border: none;
-	background: #333;
-	color: #fff;
+	background-color: #007bff; /* a shade of blue as an accent color */
+	color: #ffffff; /* white text for the button */
 	cursor: pointer;
 	margin-bottom: 20px;
+	border-radius: 8px; /* Rounded corners */
+	padding: 15px 30px; /* Larger button, more text space */
+	text-transform: uppercase; /* Uppercase text */
+	font-weight: bold; /* Bold text */
+	transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.massage .btn:hover {
+	background-color: #0056b3; /* Darker blue on hover */
 }
 
 @media (max-width: 360px) {
+	.main {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
 	.main img {
-		width: 100%;
-		float: none;
+		width: 80%; /* Adjusted width for mobile */
+		/* float: none; removed as float is no longer used */
+		margin-right: 0; /* Remove right margin on mobile */
+		margin-bottom: 20px; /* Add bottom margin on mobile */
 	}
 
 	.massage {
 		width: 100%;
-		float: none;
+		/* float: none; removed as float is no longer used */
 	}
 
 	.massage h1 {
-		font-size: 35px;
+		font-size: 32px; /* Updated font size for mobile */
 	}
 
 	.massage p {
 		width: 100%;
 		text-align: normal;
 		margin-bottom: 66px;
+		font-size: 16px; /* Updated font size for mobile */
+	}
+
+	.massage .btn {
+		padding: 12px 24px; /* Adjusted padding for mobile */
 	}
 }
